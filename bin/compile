@@ -9,6 +9,8 @@ set -e
 
 echo -n "PATH="
 echo $PATH
+echo -n "whoami? "
+echo `whoami`
 echo -n "sudo: "
 echo `which sudo`
 echo -n "apt-get: "
@@ -33,6 +35,8 @@ source $BIN_DIR/utils
 
 # exit if no build environment
 [[ ! $REDIS_URL ]] && error "No supporting environment detected!\nPlease create supporting application services."
+
+apt-get install sudo
 
 cd $BUILD_DIR
 
