@@ -7,6 +7,8 @@
 # fail fast
 set -e
 
+echo $PATH
+
 # Debug mode
 [[ $DEBUG ]] && set -x
 
