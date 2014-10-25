@@ -7,7 +7,12 @@
 # fail fast
 set -e
 
+echo -n "PATH="
 echo $PATH
+echo -n "sudo: "
+echo `which sudo`
+echo -n "apt-get: "
+echo `which apt-get`
 
 # Debug mode
 [[ $DEBUG ]] && set -x
